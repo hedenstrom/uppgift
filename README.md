@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Mina Kommentarer om uppgiften
+
+Apiets proerty för [before] är alltid null medans [after] innehåller information. Då är det lätt att paginera framåt, då är det svårare att paginera bakåt. Så för att göra detta lättare (och snyggare för den delen), så implementerar jag infinite-scroll :).
+
+

@@ -1,0 +1,17 @@
+<div
+class="search-results"
+infiniteScroll
+[infiniteScrollDistance]="2"
+[infiniteScrollThrottle]="20"
+(scrolled)="onScrollDown()"
+[scrollWindow]="false"
+>
+  <ol>
+    <li *ngFor="let entry of content.entries">
+      ({{entry.created}}) |
+      {{entry.title}}
+      ({{entry.num_comments}} kommentarer)
+    </li>
+  </ol>
+  
+</div>
