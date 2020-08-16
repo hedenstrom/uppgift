@@ -1,0 +1,9 @@
+<div class="selector-panel">
+    <fa-icon class="icon left" (click)="onClick(true)"
+    [ngClass]="{'selected' : showAsList}" 
+    [icon]="faBars" title="Visa som kort..."></fa-icon>
+    <fa-icon class="icon right"  (click)="onClick(false)"
+    [ngClass]="{'selected' : !showAsList}" 
+    [icon]="faTh" title="Visa som lista"></fa-icon>
+</div>
+

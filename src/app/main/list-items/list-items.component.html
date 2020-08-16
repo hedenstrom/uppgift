@@ -1,0 +1,10 @@
+<ul *ngIf="showAsList" >
+    <li *ngFor="let entry of entries">
+      <app-list-item [entry]="entry"></app-list-item>
+    </li>
+  </ul>
+  <ul class="wrap" *ngIf="!showAsList" >
+    <li *ngFor="let entry of entries">
+      <app-card-item [entry]="entry"></app-card-item>
+    </li>
+  </ul>

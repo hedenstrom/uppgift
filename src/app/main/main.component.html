@@ -1,17 +1,12 @@
-<div
-class="search-results"
-infiniteScroll
-[infiniteScrollDistance]="2"
-[infiniteScrollThrottle]="20"
-(scrolled)="onScrollDown()"
-[scrollWindow]="false"
->
-  <ol>
-    <li *ngFor="let entry of content.entries">
-      ({{entry.created}}) |
-      {{entry.title}}
-      ({{entry.num_comments}} kommentarer)
-    </li>
-  </ol>
-  
+<div class="main-panel">
+  <div class="main-header">
+    <app-view-selector (showAsListselected)="viewSelectorSelected($event)"></app-view-selector>
+  </div>
+  <div class="search-results" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="20"
+    (scrolled)="onScrollDown()" Id="scrollarea" [scrollWindow]="false">
+       <app-list-items [showAsList]="showAsList" [entries]="content.entries"></app-list-items>
+    <div *ngIf="content.after && content.entries" class="getmore-link">
+      <a (click)="onScrollDown()" href="#"><span>Hämta mera...</span></a>
+    </div>
+  </div>
 </div>

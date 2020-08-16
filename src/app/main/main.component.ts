@@ -1,8 +1,10 @@
 
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
 import { EntriesService } from '.././services/entries.service';
 import { Subscription } from 'rxjs';
 import { Content } from '.././models/content';
+import { DOCUMENT } from '@angular/common';
+
 
 @Component({
   selector: 'app-main',
@@ -10,9 +12,12 @@ import { Content } from '.././models/content';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit, OnDestroy {
-  constructor(private entriesService: EntriesService) { }
+
+  constructor(private entriesService: EntriesService,
+              @Inject(DOCUMENT) private document: Document)  { }
   private subscription: Subscription = new Subscription();
-  private pageNumbers = 25;
+  private pageNumbers = 40;
+  showAsList = true;
   public content: Content = {
     entries: [],
     before: null,
@@ -26,7 +31,6 @@ export class MainComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.onScrollDown();
-
   }
 
   getEntries(pageNumbers: number, after?: string) {
@@ -43,6 +47,21 @@ export class MainComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
+  viewSelectorSelected(showAsList: boolean) {
+    this.showAsList = showAsList;
+    this.scrollToTop();
+  }
+  /**
+   * Skrollar till toppen när man byter Vy
+   */
+  private scrollToTop() {
+    setTimeout(() => {
+      const obj = this.document.getElementById('scrollarea');
+      if (obj) {
+        obj.scrollTop = 0;
+      }
+    }, 200);
+  }
 }
 
 

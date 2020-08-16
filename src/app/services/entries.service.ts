@@ -14,8 +14,7 @@ export class EntriesService {
   /**
    * Hämtar Entries från reddit-apiet (hämtar entries från sweden.json)
    * @param pages antal sidor som skall hämtas
-   * @param after vad som kommer när man går framåt
-   * @param before vad som kommer innan när man går bakåt
+   * @param after vart hämtningen skall börjar (optional)
    */
   getEntries(pageNumbers: number, after?: string): Observable<Content> {
     return this.http.get(this.getUrl(pageNumbers, after))

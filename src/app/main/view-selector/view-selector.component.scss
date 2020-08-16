@@ -1,0 +1,24 @@
+.selector-panel {
+    width: 45px;
+    position: absolute;
+    right: 24px;
+   
+}
+.left {
+    float: left;
+}
+.right {
+    float:right;
+}
+.icon {
+    color: grey;
+    margin-top: 15px;
+    font-size: 19px;
+    &:hover {
+        color: white;
+   
+    }
+}
+.selected {
+    color: white;
+}

@@ -1,4 +1,25 @@
 .search-results {
-    height: 20rem;
+    height: calc(100vh - 168px);
+    width: 100%;
     overflow: scroll;
   }
+  .main-panel {
+    width: 100%;
+    background-color: white;
+  }
+  .main-header {
+    height: 38px;
+    width: 100%;
+    background: #2B353E;
+    color: white;
+    height: 47px;
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.45);
+    box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.45);
+  }
+
+.getmore-link {
+  width: calc(100vw - 40px);
+  text-align: right;
+  margin-right: 12px;
+  margin-top: 12px;
+}
