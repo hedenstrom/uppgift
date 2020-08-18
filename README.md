@@ -14,12 +14,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
@@ -28,6 +22,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Mina Kommentarer om uppgiften
 
-Apiets proerty för [before] är alltid null medans [after] innehåller information. Då är det lätt att paginera framåt, då är det svårare att paginera bakåt. Så för att göra detta lättare (och snyggare för den delen), så implementerar jag infinite-scroll :).
+Apiets property för [before] är alltid null. Det gör det svårart att paginera bakåt. Däremot innehåller [after]  information. Så det går utmärkt att paginera framåt. För att göra detta lättare (och snyggare för den delen), så implementerar jag infinite-scroll :).
+
+I Gui:t kan man välja om man vill se posterna som en lista eller som kort.
+
+
+Håkan Hedenström
+hakan@heden.biz
+0760-493800
 
 

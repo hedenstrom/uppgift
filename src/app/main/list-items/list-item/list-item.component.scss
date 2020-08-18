@@ -1,0 +1,41 @@
+@import "~src/app/custom.scss";
+
+.row {
+  display: table-row;
+  height: 30px;
+  cursor: pointer;
+
+  &:hover {
+    color: $app-hover-color;
+  }
+}
+
+.col-1 {
+  display: table-cell;
+  width: 120px;
+  font-weight: 600;
+}
+
+.col-2 {
+  width: 30px;
+  display: table-cell;
+}
+
+.col-3 {
+  width: 180px;
+  display: table-cell;
+  color: $app-color;
+}
+
+.col-4 {
+  display: table-cell;
+}
+
+.icon {
+  color: $app-color;
+  cursor: pointer;
+
+  &:hover {
+    color: $app-hover-color;
+  }
+}

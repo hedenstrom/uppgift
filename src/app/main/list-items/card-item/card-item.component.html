@@ -1,3 +1,21 @@
 <div class="card">
-    <p>{{entry.title}}</p>
+  <div class="date">{{entry.created}}</div>
+  <div class="score">
+    <span>{{entry.score}} poäng</span>
+  </div>
+  <div class="title">{{entry.title}}</div>
+  <div class="author" [ngClass]="{'clickable' : entry.selftext}" (click)="onSelfTextClick()">
+    <fa-icon *ngIf="entry.selftext" class="icon" [icon]="faCommentAlt" title="Kommentarer"></fa-icon>
+    <span>{{entry.author}}</span>
+  </div>
+  <div class="permalink clickable"><a href="https://www.reddit.com/{{entry.permalink}}"
+      (click)="$event.stopPropagation();" target="_blank">
+      <fa-icon class="icon" [icon]="faPlay" title="Öppna"></fa-icon><span>{{entry.num_comments}} kommentarer</span>
+    </a>
+  </div>
+  <div>
+  </div>
+  <div *ngIf="entry.thumbnail !=='self'" class="cardimage"
+    [ngStyle]="entry.thumbnail && {'background-image': 'url(' + entry.thumbnail + ')'}">
+  </div>
 </div>

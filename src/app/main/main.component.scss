@@ -1,7 +1,10 @@
 .search-results {
     height: calc(100vh - 168px);
     width: 100%;
-    overflow: scroll;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #d9d9de;
   }
   .main-panel {
     width: 100%;

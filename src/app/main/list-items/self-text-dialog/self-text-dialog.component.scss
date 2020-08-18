@@ -1,0 +1,25 @@
+@import "~src/app/custom.scss";
+.page {
+    max-height: 535px;
+    width: 565px;
+    overflow: auto;
+    overflow-wrap: break-word;
+    margin-top: 12px !important;
+}
+
+h2 {
+  color: $app-color;
+}
+.content {
+  flex-grow: 1;
+  font-weight: normal;
+  align-self: stretch;
+  overflow-y: scroll;
+  overflow-y: hidden;
+}
+
+.close-icon {
+  float: right;
+  margin: -17px -13px 0 0;
+  cursor: pointer;
+}

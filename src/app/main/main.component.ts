@@ -1,5 +1,5 @@
 
-import { Component, OnInit, OnDestroy, Inject } from '@angular/core';
+import { Component, OnInit, OnDestroy, Inject, Injectable } from '@angular/core';
 import { EntriesService } from '.././services/entries.service';
 import { Subscription } from 'rxjs';
 import { Content } from '.././models/content';
@@ -11,6 +11,7 @@ import { DOCUMENT } from '@angular/common';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
+
 export class MainComponent implements OnInit, OnDestroy {
 
   constructor(private entriesService: EntriesService,
@@ -25,7 +26,6 @@ export class MainComponent implements OnInit, OnDestroy {
   };
 
   onScrollDown() {
-    console.log('Scrolldown!!!!!');
     this.getEntries(this.pageNumbers, this.content.after);
   }
 
@@ -49,7 +49,12 @@ export class MainComponent implements OnInit, OnDestroy {
 
   viewSelectorSelected(showAsList: boolean) {
     this.showAsList = showAsList;
-    this.scrollToTop();
+    this.content = {
+      entries: [],
+      before: null,
+      after: null
+    };
+    this.onScrollDown();
   }
   /**
    * Skrollar till toppen när man byter Vy

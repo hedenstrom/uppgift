@@ -1,10 +1,9 @@
-<ul *ngIf="showAsList" >
-    <li *ngFor="let entry of entries">
-      <app-list-item [entry]="entry"></app-list-item>
-    </li>
-  </ul>
-  <ul class="wrap" *ngIf="!showAsList" >
-    <li *ngFor="let entry of entries">
-      <app-card-item [entry]="entry"></app-card-item>
-    </li>
-  </ul>
+<ul [ngClass]="{'wrap': !showAsList}">
+
+  <li *ngFor="let entry of entries">
+    <app-list-item *ngIf="showAsList" (openClicked)="onOpenClicked($event)" [entry]="entry"></app-list-item>
+    <app-card-item (selfTextClicked)="onSelfTextClicked($event)"
+      *ngIf="!showAsList" [entry]="entry"></app-card-item>
+  </li>
+
+</ul>

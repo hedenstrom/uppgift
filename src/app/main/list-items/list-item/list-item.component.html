@@ -1,3 +1,12 @@
-({{entry.created}}) |
-{{entry.title}}
-({{entry.num_comments}} kommentarer)
+<div class="row" (click)="onOpenClicked()">
+  <div class="col-1">{{entry.created}}</div>
+  <div class="col-2">
+    <div class="permalink clickable"><a href="https://www.reddit.com/{{entry.permalink}}" (click)="$event.stopPropagation();"
+        target="_blank">
+        <fa-icon class="icon" [icon]="faPlay" title="Öppna i Reddit"></fa-icon>
+      </a>
+    </div>
+  </div>
+  <div class="col-3">{{entry.author}} </div>
+  <div class="col-4">{{entry.title}}</div>
+</div>
