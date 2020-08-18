@@ -1,0 +1,78 @@
+@import "~src/app/custom.scss";
+
+.panel {
+  position: relative;
+}
+
+.top-panel {
+  min-height: 100px;
+}
+
+.details {
+  position: relative;
+
+}
+.date {
+    position: relative;
+
+}
+.title {
+  min-height: 53px;
+}
+
+.author {
+  text-align: right;
+}
+
+.selftext {
+  margin-top: 12px;
+}
+
+.permalink {
+  float: right;
+  text-align: right;
+  margin-top: 19px;
+}
+
+.score {
+  color: darkgrey;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.cardimage {
+  float: left;
+  margin: 0 5px 5px 0;
+  height: 200px;
+  width: 200px;
+  border-bottom: 1px solid lightgrey;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.close-icon {
+  float: right;
+  margin: -17px -13px 0 0;
+  cursor: pointer;
+}
+
+a {
+  color: $app-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $app-color;
+  }
+
+  &:hover {
+    color: $app-hover-color;
+  }
+
+  &:active {
+    color: $app-color;
+  }
+}

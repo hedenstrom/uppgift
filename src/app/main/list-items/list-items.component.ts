@@ -36,8 +36,8 @@ export class ListItemsComponent implements OnInit {
 
   onOpenClicked(entry: Entry) {
     const dialogRef = this.dialog.open(DetailsDialogComponent, {
-      width: '600px',
-      height: '600px',
+      width: '100%',
+      height: 'auto', // calc(100vh - 40px)
       data: entry
     });
     dialogRef.afterClosed().subscribe(result => {
