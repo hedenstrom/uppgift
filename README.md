@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
 
+## Update NPM
+
+run `npm install`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -22,9 +26,20 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Mina Kommentarer om uppgiften
 
-Apiets property för [before] är alltid null. Det gör det svårart att paginera bakåt. Däremot innehåller [after]  information. Så det går utmärkt att paginera framåt. För att göra detta lättare (och snyggare för den delen), så implementerar jag infinite-scroll :).
+Jag har använt mig av följande:
 
-I Gui:t kan man välja om man vill se posterna som en lista eller som kort.
+- Angular 10
+- Angular Material (för Dialog)
+- FontAwesome (för några ikoner)
+- ngx-infinite-scroll (För att enkelt implementera infinite scroll, istället för traditionell paginering)
+
+
+Då jag skippat [Föregående] och [Nästa] så blev det lite svårt att göra bonusuppgiften. I stället gjorde jag det möjligt att välja två olika vyer: Lista/Kort
+
+Bra att känna till:
+
+Ingen routing
+Ingen responsivitet
 
 
 Håkan Hedenström
