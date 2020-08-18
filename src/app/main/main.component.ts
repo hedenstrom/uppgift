@@ -5,7 +5,6 @@ import { Subscription } from 'rxjs';
 import { Content } from '.././models/content';
 import { DOCUMENT } from '@angular/common';
 
-
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -56,17 +55,7 @@ export class MainComponent implements OnInit, OnDestroy {
     };
     this.onScrollDown();
   }
-  /**
-   * Skrollar till toppen när man byter Vy
-   */
-  private scrollToTop() {
-    setTimeout(() => {
-      const obj = this.document.getElementById('scrollarea');
-      if (obj) {
-        obj.scrollTop = 0;
-      }
-    }, 200);
-  }
+ 
 }
 
 

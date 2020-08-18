@@ -17,7 +17,7 @@ export interface DialogData {
 })
 export class ListItemsComponent implements OnInit {
 
-  constructor(public dialog: MatDialog, viewContainerRef: ViewContainerRef) { }
+  constructor(public dialog: MatDialog) { }
 
   @Input() entries: Observable<Entry[]>;
   @Input() showAsList: boolean;
@@ -37,7 +37,7 @@ export class ListItemsComponent implements OnInit {
   onOpenClicked(entry: Entry) {
     const dialogRef = this.dialog.open(DetailsDialogComponent, {
       width: '100%',
-      height: 'auto', // calc(100vh - 40px)
+      height: 'auto',
       data: entry
     });
     dialogRef.afterClosed().subscribe(result => {
